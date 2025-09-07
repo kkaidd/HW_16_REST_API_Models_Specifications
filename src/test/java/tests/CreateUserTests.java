@@ -2,6 +2,7 @@ package tests;
 
 import models.User;
 import models.CreateUserResponse;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.UserApiSteps;
 
@@ -13,6 +14,7 @@ public class CreateUserTests extends TestBase {
     private final UserApiSteps userSteps = new UserApiSteps();
 
     @Test
+    @Tag("simple_test")
     void createUserTest() {
         User user = User.builder()
                 .name("Kaid")

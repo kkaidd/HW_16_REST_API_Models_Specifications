@@ -2,6 +2,7 @@ package tests;
 
 import models.LoginUserRequest;
 import models.LoginUserResponse;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import steps.UserApiSteps;
 
@@ -25,6 +26,7 @@ public class LoginUserTests extends TestBase {
     }
 
     @Test
+    @Tag("simple_test")
     void loginUnsuccessfulTest() {
         LoginUserRequest request = LoginUserRequest.builder()
                 .email("peter@klaven")
