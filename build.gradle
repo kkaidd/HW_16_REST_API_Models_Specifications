@@ -48,3 +48,10 @@ tasks.withType(Test) {
         }
     }
 }
+
+task ui_test(type: Test) {
+    useJUnitPlatform {
+        includeEngines 'junit', 'junit-jupiter'
+        includeTags("simple_test")
+    }
+}
