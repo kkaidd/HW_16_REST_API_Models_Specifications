@@ -13,12 +13,12 @@ public class DeleteUserTests extends TestBase {
     @Test
     @Tag("simple_test")
     void successfulDeleteUserTest() {
-        userSteps.deleteUser("4", apiKey, responseSpecNoContent204);
+        userSteps.deleteUser("4", responseSpecNoContent204);
     }
 
     @Test
     @Tag("simple_test")
     void unsuccessfulDeleteUserTest() {
-        userSteps.deleteUser("9999", apiKey, responseSpecNoContent204);
+        userSteps.deleteUser("9999", responseSpecNoContent204);
     }
 }

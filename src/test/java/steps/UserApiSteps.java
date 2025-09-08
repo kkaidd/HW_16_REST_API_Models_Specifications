@@ -46,9 +46,8 @@ public class UserApiSteps {
     }
 
     @Step("Удаляем пользователя с id={id}")
-    public void deleteUser(String id, String apiKey, ResponseSpecification responseSpec) {
+    public void deleteUser(String id, ResponseSpecification responseSpec) {
         given()
-                .header("x-api-key", apiKey)
                 .spec(request)
                 .when()
                 .delete("/users/" + id)

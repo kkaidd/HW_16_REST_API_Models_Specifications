@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import steps.UserApiSteps;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static specs.ResponseSpec.responseSpecBadRequest400;
 import static specs.ResponseSpec.responseSpecOk200;
 
 public class LoginUserTests extends TestBase {
@@ -32,7 +33,7 @@ public class LoginUserTests extends TestBase {
                 .email("peter@klaven")
                 .build();
 
-        LoginUserResponse response = userSteps.login(request, responseSpecOk200);
+        LoginUserResponse response = userSteps.login(request, responseSpecBadRequest400);
 
         assertThat(response.getError()).isEqualTo("Missing password");
     }

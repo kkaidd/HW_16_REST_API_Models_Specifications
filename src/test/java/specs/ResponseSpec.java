@@ -24,4 +24,10 @@ public class ResponseSpec {
             .expectStatusCode(204)
             .log(LogDetail.ALL)
             .build();
+
+    public static ResponseSpecification responseSpecBadRequest400 = new ResponseSpecBuilder()
+            .expectStatusCode(400)
+            .log(LogDetail.ALL)
+            .build();
+
 }
